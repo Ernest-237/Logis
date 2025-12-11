@@ -1,79 +1,121 @@
-// Navigation menu toggle
-function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    navLinks.classList.toggle('active');
-}
+// ===================================
+// NAVIGATION MOBILE - JavaScript
+// ===================================
 
-// Close menu on mobile when clicking outside
-document.addEventListener('click', function(e) {
-    const navLinks = document.getElementById('navLinks');
-    const menuToggle = document.querySelector('.menu-toggle');
-    
-    if (window.innerWidth <= 768 && 
-        navLinks && 
-        menuToggle && 
-        !navLinks.contains(e.target) && 
-        !menuToggle.contains(e.target) && 
-        navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-    }
-});
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        if (this.getAttribute('href') !== '#') {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const target = document.querySelector(targetId);
-            
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (window.innerWidth <= 768) {
-                    const navLinks = document.getElementById('navLinks');
-                    if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                    }
-                }
-            }
-        }
-    });
-});
-
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-        nav.style.padding = '0.6rem 0';
-    } else {
-        nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        nav.style.padding = '0.8rem 0';
-    }
-});
-
-// Animate on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-        }
-    });
-}, observerOptions);
-
-// Observe elements to animate
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.service-card, .team-member, .contact-info, .contact-form').forEach(el => {
-        observer.observe(el);
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+
+    // Fonction pour ouvrir/fermer le menu
+    function toggleMenu(event) {
+        if (event) {
+            event.stopPropagation();
+        }
+
+        const isActive = navLinks.classList.contains('active');
+        
+        if (isActive) {
+            // Fermer le menu
+            closeMenu();
+        } else {
+            // Ouvrir le menu
+            openMenu();
+        }
+    }
+
+    // Fonction pour ouvrir le menu
+    function openMenu() {
+        navLinks.classList.add('active');
+        body.classList.add('menu-open');
+        
+        // Changer l'icône en X
+        const icon = menuToggle.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        }
+    }
+
+    // Fonction pour fermer le menu
+    function closeMenu() {
+        navLinks.classList.remove('active');
+        body.classList.remove('menu-open');
+        
+        // Remettre l'icône hamburger
+        const icon = menuToggle.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    }
+
+    // Événement sur le bouton hamburger
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMenu);
+    }
+
+    // Fermer le menu quand on clique sur un lien (seulement sur mobile)
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                closeMenu();
+            }
+        });
     });
+
+    // Fermer le menu si on clique en dehors (sur l'overlay)
+    navLinks.addEventListener('click', function(event) {
+        // Si on clique sur le fond (pas sur un lien)
+        if (event.target === navLinks) {
+            closeMenu();
+        }
+    });
+
+    // Empêcher la propagation des clics à l'intérieur du menu
+    const navItems = navLinks.querySelectorAll('li, a');
+    navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+
+    // Fermer le menu avec la touche Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+
+    // Gérer le redimensionnement de la fenêtre
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            // Si on passe en desktop, fermer le menu mobile
+            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                closeMenu();
+            }
+        }, 250);
+    });
+});
+
+// Animation au scroll (pour les cartes)
+window.addEventListener('DOMContentLoaded', function() {
+    const fadeElements = document.querySelectorAll('.service-card, .team-card, .project-card, .mission-card');
+    
+    const fadeInOnScroll = () => {
+        fadeElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < window.innerHeight - elementVisible) {
+                element.classList.add('fade-in');
+            }
+        });
+    };
+    
+    window.addEventListener('scroll', fadeInOnScroll);
+    fadeInOnScroll(); // Exécuter au chargement
 });

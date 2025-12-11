@@ -7,7 +7,7 @@ $selected_service = isset($_GET['service']) ? htmlspecialchars($_GET['service'])
 ?>
 
 <!-- Hero Contact -->
-<section class="hero">
+<section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('assets/images/cargo.jpg') center/cover no-repeat;">
     <div class="hero-content">
         <h1>Contactez-Nous</h1>
         <p>Notre équipe est à votre disposition pour répondre à toutes vos questions</p>
@@ -25,7 +25,7 @@ $selected_service = isset($_GET['service']) ? htmlspecialchars($_GET['service'])
                 <div class="contact-icon">📍</div>
                 <div>
                     <h3>Adresse</h3>
-                    <p>Yaoundé, Cameroun</p>
+                    <p>Yaoundé, Odza entree Fecafoot</p>
                     <p style="font-size: 0.9rem; color: var(--gray-600);">Bureau principal</p>
                 </div>
             </div>
@@ -34,7 +34,7 @@ $selected_service = isset($_GET['service']) ? htmlspecialchars($_GET['service'])
                 <div class="contact-icon">📞</div>
                 <div>
                     <h3>Téléphone</h3>
-                    <p>+237 XXX XXX XXX</p>
+                    <p>+237 690232217 | 672105771</p>
                     <p style="font-size: 0.9rem; color: var(--gray-600);">Lun-Ven: 8h-18h</p>
                 </div>
             </div>
@@ -58,7 +58,7 @@ $selected_service = isset($_GET['service']) ? htmlspecialchars($_GET['service'])
             </div>
             
             <!-- WhatsApp Button -->
-            <a href="https://wa.me/237XXXXXXXXX" class="whatsapp-btn" target="_blank">
+            <a href="https://wa.me/237690232217" class="whatsapp-btn" target="_blank">
                 💬 Chatter sur WhatsApp
             </a>
         </div>

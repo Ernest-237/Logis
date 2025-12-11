@@ -5,12 +5,13 @@ include 'includes/header.php';
 ?>
 
 <!-- Hero Équipe -->
-<section class="hero">
+<section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('assets/images/cargo.jpg') center/cover no-repeat;">
     <div class="hero-content">
         <h1>Notre Équipe</h1>
         <p>Des professionnels dévoués à votre service</p>
     </div>
 </section>
+
 
 <!-- Équipe -->
 <section>
@@ -23,7 +24,7 @@ include 'includes/header.php';
         <!-- Membre 1 -->
         <div class="team-card">
             <div class="team-avatar">
-                <div class="avatar-placeholder">👤</div>
+                <img src="assets/team/membre1.jpg" alt="Directeur Général" onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>👤</div>'">
             </div>
             <h3>Nom du Membre</h3>
             <p class="team-role">Directeur Général</p>
@@ -35,7 +36,7 @@ include 'includes/header.php';
         <!-- Membre 2 -->
         <div class="team-card">
             <div class="team-avatar">
-                <div class="avatar-placeholder">👤</div>
+                <img src="assets/team/membre2.jpg" alt="Responsable Opérations" onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>👤</div>'">
             </div>
             <h3>Nom du Membre</h3>
             <p class="team-role">Responsable Opérations</p>
@@ -47,7 +48,7 @@ include 'includes/header.php';
         <!-- Membre 3 -->
         <div class="team-card">
             <div class="team-avatar">
-                <div class="avatar-placeholder">👤</div>
+                <img src="assets/team/membre3.jpg" alt="Responsable Commercial" onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>👤</div>'">
             </div>
             <h3>Nom du Membre</h3>
             <p class="team-role">Responsable Commercial</p>
@@ -59,7 +60,7 @@ include 'includes/header.php';
         <!-- Membre 4 -->
         <div class="team-card">
             <div class="team-avatar">
-                <div class="avatar-placeholder">👤</div>
+                <img src="assets/team/membre4.jpg" alt="Responsable Dédouanement" onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>👤</div>'">
             </div>
             <h3>Nom du Membre</h3>
             <p class="team-role">Responsable Dédouanement</p>
@@ -71,7 +72,7 @@ include 'includes/header.php';
         <!-- Membre 5 -->
         <div class="team-card">
             <div class="team-avatar">
-                <div class="avatar-placeholder">👤</div>
+                <img src="assets/team/membre5.jpg" alt="Responsable Voyages" onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>👤</div>'">
             </div>
             <h3>Nom du Membre</h3>
             <p class="team-role">Responsable Voyages</p>
@@ -83,7 +84,7 @@ include 'includes/header.php';
         <!-- Membre 6 -->
         <div class="team-card">
             <div class="team-avatar">
-                <div class="avatar-placeholder">👤</div>
+                <img src="assets/team/membre6.jpg" alt="Responsable Négoce" onerror="this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>👤</div>'">
             </div>
             <h3>Nom du Membre</h3>
             <p class="team-role">Responsable Négoce</p>
@@ -95,7 +96,7 @@ include 'includes/header.php';
 </section>
 
 <!-- Valeurs d'Équipe -->
-<section style="background: var(--gray-50);">
+<section style="background: var(--primary-light);">
     <h2>Ce Qui Nous Anime</h2>
     <div style="max-width: 1000px; margin: 3rem auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
         <div class="value-card">

@@ -5,7 +5,7 @@ include 'includes/header.php';
 ?>
 
 <!-- Hero À Propos -->
-<section class="hero">
+<section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('assets/images/cargo.jpg') center/cover no-repeat;">
     <div class="hero-content">
         <h1>À Propos de Nous</h1>
         <p>Révolutionner le transport et la logistique en Afrique</p>

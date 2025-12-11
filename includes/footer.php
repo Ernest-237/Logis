@@ -5,7 +5,7 @@
             <p style="margin-top: 0.5rem; font-style: italic;">"Que l'Afrique avance sans frontières"</p>
         </div>
     </footer>
-    
+
     <script src="js/main.js"></script>
 </body>
 </html>
