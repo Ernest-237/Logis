@@ -37,7 +37,7 @@ include 'includes/header.php';
             <h3> Négoce International</h3>
             <p>Approvisionnement mondial de qualité</p>
             <ul>
-                <li>Chine, Nigeria, Europe</li>
+                <li>Chine, Nigeria, Europe et bien plus encore</li>
                 <li>Sélection de fournisseurs</li>
                 <li>Négociation des prix</li>
                 <li>Gestion complète des achats</li>

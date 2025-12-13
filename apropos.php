@@ -42,7 +42,7 @@ include 'includes/header.php';
             <div class="mission-card">
                 <div style="font-size: 3rem; margin-bottom: 1rem;">💡</div>
                 <h3>Nos Valeurs</h3>
-                <p>Excellence, intégrité, innovation et engagement. Nous plaçons la satisfaction client au cœur de toutes nos actions.</p>
+                <p>intégrité ,Excellence,innovation et engagement. Nous plaçons la satisfaction client au cœur de toutes nos actions.</p>
             </div>
         </div>
     </div>

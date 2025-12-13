@@ -43,7 +43,7 @@ $selected_service = isset($_GET['service']) ? htmlspecialchars($_GET['service'])
                 <div class="contact-icon">✉️</div>
                 <div>
                     <h3>Email</h3>
-                    <p>contact@kdllogis.com</p>
+                    <p>kdlenterprise2326@gmail.com</p>
                     <p style="font-size: 0.9rem; color: var(--gray-600);">Réponse sous 24h</p>
                 </div>
             </div>
@@ -53,7 +53,7 @@ $selected_service = isset($_GET['service']) ? htmlspecialchars($_GET['service'])
                 <div>
                     <h3>Horaires</h3>
                     <p>Lundi - Vendredi: 8h00 - 18h00</p>
-                    <p>Samedi: 9h00 - 13h00</p>
+                    <!-- <p>Samedi: 9h00 - 13h00</p> -->
                 </div>
             </div>
             

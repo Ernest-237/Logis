@@ -42,9 +42,9 @@
                 <li><a href="apropos.php" class="<?php echo ($current_page == 'apropos.php') ? 'active' : ''; ?>">
                     <i class="fas fa-info-circle"></i> À Propos
                 </a></li>
-                <li><a href="equipe.php" class="<?php echo ($current_page == 'equipe.php') ? 'active' : ''; ?>">
+                <!-- <li><a href="equipe.php" class="<?php echo ($current_page == 'equipe.php') ? 'active' : ''; ?>">
                     <i class="fas fa-users"></i> Équipe
-                </a></li>
+                </a></li> -->
                 <li><a href="realisation.php" class="<?php echo ($current_page == 'realisation.php') ? 'active' : ''; ?>">
                     <i class="fas fa-trophy"></i> Nos Réalisations
                 </a></li>

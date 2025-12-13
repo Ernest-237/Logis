@@ -48,9 +48,9 @@ include 'includes/header.php';
                 <div class="project-placeholder">🚢</div>
             </div>
             <div class="project-content">
-                <span class="project-category">Transport Maritime</span>
-                <h3>Import de Matériel Médical - Chine vers Cameroun</h3>
-                <p>Gestion complète de l'importation de 3 conteneurs de matériel médical depuis la Chine, incluant le dédouanement et la livraison dans 5 hôpitaux à travers le pays.</p>
+                <span class="project-category">Import Marchand</span>
+                <h3>Import de divers boisons </h3>
+                <p>Gestion complète de l'importation de conteneurs de boisons et liqueurs depuis la France et L'Italie, incluant le dédouanement et la livraison à travers le pays.</p>
                 <ul class="project-features">
                     <li>✓ Livraison en 45 jours</li>
                     <li>✓ Économie de 30% sur les coûts</li>
@@ -83,7 +83,7 @@ include 'includes/header.php';
             </div>
             <div class="project-content">
                 <span class="project-category">Négoce International</span>
-                <h3>Sourcing de Matériaux de Construction - Nigeria</h3>
+                <h3>Sourcing de Matériaux de Construction - Chine</h3>
                 <p>Négociation et approvisionnement de matériaux de construction pour un grand projet immobilier, avec contrôle qualité et livraison échelonnée.</p>
                 <ul class="project-features">
                     <li>✓ Réduction de 25% des coûts</li>
@@ -100,8 +100,8 @@ include 'includes/header.php';
             </div>
             <div class="project-content">
                 <span class="project-category">Transport Terrestre</span>
-                <h3>Logistique Événementielle - Festival Panafricain</h3>
-                <p>Coordination du transport de matériel scénique et technique pour un festival international, avec gestion des délais serrés et équipements fragiles.</p>
+                <h3>Re-exportation de conteneure de produit Industrielle du Cameroun  vers le Ghana </h3>
+                <p>Coordination du transport de matériel scénique et technique , avec gestion des délais serrés et équipements fragiles.</p>
                 <ul class="project-features">
                     <li>✓ 50 tonnes de matériel</li>
                     <li>✓ Livraison multi-sites</li>
@@ -134,7 +134,7 @@ include 'includes/header.php';
             </div>
             <div class="project-content">
                 <span class="project-category">Industrie</span>
-                <h3>Import de Machines Industrielles - Allemagne</h3>
+                <h3>Import de Machines Industrielles - Chine</h3>
                 <p>Gestion de l'importation de machines industrielles lourdes, incluant le transport spécialisé, l'assurance et l'installation sur site.</p>
                 <ul class="project-features">
                     <li>✓ Équipements de 15 tonnes</li>
@@ -196,34 +196,112 @@ include 'includes/header.php';
 <section>
     <h2>Secteurs d'Activité</h2>
     <p style="text-align: center; color: var(--gray-600); max-width: 700px; margin: 0 auto 3rem;">
-        Nous intervenons dans de nombreux secteurs d'activité
+        Nous intervenons dans de nombreux secteurs d'activité. Cliquez pour voir nos réalisations.
     </p>
     
+    <style>
+    .sectors-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    
+    .sector-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 2px solid var(--gray-200);
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    
+    .sector-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        border-color: var(--primary);
+    }
+    
+    .sector-icon {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .sector-item:hover .sector-icon {
+        transform: scale(1.2);
+    }
+    
+    .sector-item h3 {
+        font-size: 1.1rem;
+        color: var(--gray-900);
+        margin: 0;
+    }
+    
+    .sector-badge {
+        display: inline-block;
+        background: var(--primary-light);
+        color: var(--primary);
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-top: 0.75rem;
+    }
+    
+    @media (max-width: 768px) {
+        .sectors-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .sector-item {
+            padding: 1.5rem 1rem;
+        }
+        
+        .sector-icon {
+            font-size: 2.5rem;
+        }
+    }
+    </style>
+    
     <div class="sectors-grid">
-        <div class="sector-item">
-            <div class="sector-icon">🏥</div>
-            <h3>Santé & Pharmaceutique</h3>
-        </div>
-        <div class="sector-item">
+        <a href="galerie.php?sector=boisons" class="sector-item">
+            <div class="sector-icon">🍾</div>
+            <h3>Boissons & Liqueurs</h3>
+            <span class="sector-badge">Voir galerie</span>
+        </a>
+        <a href="galerie.php?sector=construction" class="sector-item">
             <div class="sector-icon">🏗️</div>
             <h3>Construction & BTP</h3>
-        </div>
-        <div class="sector-item">
+            <span class="sector-badge">Voir galerie</span>
+        </a>
+        <a href="galerie.php?sector=distribution" class="sector-item">
             <div class="sector-icon">🛒</div>
             <h3>Distribution & Retail</h3>
-        </div>
-        <div class="sector-item">
+            <span class="sector-badge">Voir galerie</span>
+        </a>
+        <a href="galerie.php?sector=industrie" class="sector-item">
             <div class="sector-icon">🏭</div>
             <h3>Industrie & Manufacturing</h3>
-        </div>
-        <div class="sector-item">
+            <span class="sector-badge">Voir galerie</span>
+        </a>
+        <a href="galerie.php?sector=agroalimentaire" class="sector-item">
             <div class="sector-icon">🌾</div>
             <h3>Agroalimentaire</h3>
-        </div>
-        <div class="sector-item">
+            <span class="sector-badge">Voir galerie</span>
+        </a>
+        <a href="galerie.php?sector=technologies" class="sector-item">
             <div class="sector-icon">💻</div>
             <h3>Technologies & IT</h3>
-        </div>
+            <span class="sector-badge">Voir galerie</span>
+        </a>
     </div>
 </section>
 

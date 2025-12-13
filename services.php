@@ -67,7 +67,7 @@ include 'includes/header.php';
                 <h3>Voyages d'Affaires</h3>
                 <p>Package complet pour vos déplacements professionnels internationaux.</p>
                 <ul>
-                    <li>Assistance Visa : Toutes destinations (Chine, Canada, Europe...)</li>
+                    <li>Assistance Visa : Chine, Nigeria, Europe...</li>
                     <li>Billets d'Avion : Tarifs négociés, toutes compagnies</li>
                     <li>Hébergement : Hôtels adaptés aux voyageurs d'affaires</li>
                     <li>Accompagnement : Visite des marchés et rendez-vous</li>
@@ -128,7 +128,7 @@ include 'includes/header.php';
                     <li>Optimisation : Réduction des coûts et délais</li>
                     <li>Implémentation : Mise en place des solutions</li>
                     <li>Formation : Équipes opérationnelles</li>
-                    <li>Suivi : KPIs et reporting régulier</li>
+                    <li>Suivi : Reporting régulier</li>
                 </ul>
                 <a href="contact.php?service=conseil">Demander un audit →</a>
             </div>
