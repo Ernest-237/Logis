@@ -48,6 +48,9 @@
                 <li><a href="realisation.php" class="<?php echo ($current_page == 'realisation.php') ? 'active' : ''; ?>">
                     <i class="fas fa-trophy"></i> Nos Réalisations
                 </a></li>
+                <li><a href="entreprises.php" class="<?php echo ($current_page == 'entreprises.php') ? 'active' : ''; ?>">
+                    <i class="fas fa-building"></i> Entreprises
+                </a></li>
                 <li><a href="contact.php" class="cta-nav">
                     <i class="fas fa-phone-alt"></i> Contact
                 </a></li>
